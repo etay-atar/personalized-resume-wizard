@@ -40,7 +40,7 @@ const NavBar = () => {
       <div className="container max-w-7xl mx-auto">
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="text-[#0EA5E9]">
+            <div className="text-primary">
               <FileText className="w-8 h-8" />
             </div>
             <span className="text-xl font-display font-semibold">

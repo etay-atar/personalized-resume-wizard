@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="text-[#0EA5E9]">
+              <div className="text-primary">
                 <FileText className="w-8 h-8" />
               </div>
               <span className="text-lg font-display font-semibold">
