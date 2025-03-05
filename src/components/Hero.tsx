@@ -64,61 +64,6 @@ const Hero = () => {
             ))}
           </div>
         </div>
-        
-        <div className="w-full max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-xl animated-border animate-scale-in">
-          <div className="p-1 w-full">
-            <div className="w-full h-[500px] bg-gray-100 rounded-2xl flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80 backdrop-blur-sm flex items-center justify-center">
-                <div className="p-8 max-w-lg text-center">
-                  <h3 className="text-2xl font-bold mb-4">See how AI transforms your resume</h3>
-                  <p className="text-foreground/80 mb-6">Upload your resume and a job description to see AI-powered optimization in action.</p>
-                  <Button size="lg">
-                    Try For Free
-                  </Button>
-                </div>
-              </div>
-              {/* Placeholder for actual app screenshot */}
-              <div className="p-6 w-full h-full opacity-60">
-                <div className="w-full h-full rounded-lg bg-white shadow-md flex flex-col">
-                  <div className="h-10 border-b flex items-center px-4">
-                    <div className="w-3 h-3 rounded-full bg-red-400 mr-2"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-400 mr-2"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  </div>
-                  <div className="flex-1 flex">
-                    <div className="w-1/3 border-r p-4">
-                      <div className="w-full h-5 bg-gray-200 rounded mb-3"></div>
-                      <div className="w-2/3 h-5 bg-gray-200 rounded mb-6"></div>
-                      <div className="space-y-2">
-                        {[...Array(5)].map((_, i) => (
-                          <div key={i} className="flex items-center">
-                            <div className="w-4 h-4 rounded-full bg-gray-300 mr-2"></div>
-                            <div className="w-24 h-4 bg-gray-300 rounded"></div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="w-2/3 p-4">
-                      <div className="w-full h-8 bg-gray-200 rounded mb-4"></div>
-                      <div className="space-y-2 mb-4">
-                        {[...Array(3)].map((_, i) => (
-                          <div key={i} className="w-full h-4 bg-gray-200 rounded"></div>
-                        ))}
-                      </div>
-                      <div className="w-full h-px bg-gray-200 my-4"></div>
-                      <div className="w-1/3 h-6 bg-gray-200 rounded mb-3"></div>
-                      <div className="space-y-2">
-                        {[...Array(4)].map((_, i) => (
-                          <div key={i} className="w-full h-4 bg-gray-200 rounded"></div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
