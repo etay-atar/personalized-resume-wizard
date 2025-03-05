@@ -1,6 +1,7 @@
 
 import React from "react";
 import { cn } from "@/lib/utils";
+import { FileText } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -33,8 +34,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-white font-bold text-sm">A</span>
+              <div className="text-[#0EA5E9]">
+                <FileText className="w-8 h-8" />
               </div>
               <span className="text-lg font-display font-semibold">
                 AI Resume Pro

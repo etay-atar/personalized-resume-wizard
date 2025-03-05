@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X, FileText } from "lucide-react";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,8 +40,8 @@ const NavBar = () => {
       <div className="container max-w-7xl mx-auto">
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <span className="text-white font-bold text-xl">A</span>
+            <div className="text-[#0EA5E9]">
+              <FileText className="w-8 h-8" />
             </div>
             <span className="text-xl font-display font-semibold">
               AI Resume Pro
