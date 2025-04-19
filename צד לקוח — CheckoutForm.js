@@ -26,16 +26,16 @@ export default function CheckoutForm({ price }) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        amount: price * 100, // סכום בסנטים
+        amount: price * 100, // סכום 
         payment_method: paymentMethod.id,
       }),
     });
 
     const result = await response.json();
     if (result.success) {
-      alert("תשלום הצליח ✅");
+      alert("תשלום הצליח");
     } else {
-      alert("תשלום נכשל ❌");
+      alert("תשלום נכשל");
     }
 
     setLoading(false);
