@@ -1,0 +1,42 @@
+import { useState } from "react";
+import CheckoutForm from "./CheckoutForm";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const stripePromise = loadStripe("YOUR_STRIPE_PUBLIC_KEY");
+
+export default function PricingPage() {
+  const [selectedPrice, setSelectedPrice] = useState(null);
+
+  const pricingOptions = [
+    { title: "Free (One-Time)", price: 0 },
+    { title: "Pro Monthly", price: 9.99 },
+    { title: "Business Monthly", price: 19.99 },
+    { title: "Pro Annual", price: 79.99 },
+    { title: "Business Annual", price: 199.99 },
+  ];
+
+  return (
+    <div className="p-8 max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6">Choose Your Plan</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        {pricingOptions.map((option, index) => (
+          <div
+            key={index}
+            className="border rounded-lg p-4 hover:shadow cursor-pointer"
+            onClick={() => setSelectedPrice(option.price)}
+          >
+            <h2 className="text-xl font-semibold mb-2">{option.title}</h2>
+            <p className="text-2xl">${option.price}</p>
+          </div>
+        ))}
+      </div>
+
+      {selectedPrice !== null && (
+        <Elements stripe={stripePromise}>
+          <CheckoutForm price={selectedPrice} />
+        </Elements>
+      )}
+    </div>
+  );
+}
